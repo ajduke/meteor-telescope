@@ -1,0 +1,12 @@
+{
+  "name": "meteor-telescope",
+  "description": "Meteor package for Telescope Application",
+  "homepage": "https://github.com/ajduke/meteor-telescope.git",
+  "author": "Abhijeet Sutar <ajduke@about.me>",
+  "version": "0.0.1",
+  "git": "https://github.com/ajduke/meteor-telescope.git",
+    "packages": {
+    "bootstrap-3": "",
+    "jquery":""
+  }
+}
