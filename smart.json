@@ -5,8 +5,17 @@
   "author": "Abhijeet Sutar <ajduke@about.me>",
   "version": "0.0.1",
   "git": "https://github.com/ajduke/meteor-telescope.git",
-    "packages": {
+  "packages": {
     "bootstrap-3": "",
-    "jquery":""
+    "jquery": "",
+    "database-forms": "",
+    "crypto-md5": "",
+    "momentjs": "",
+    "iron-router": "",
+    "mailchimp": "",
+    "nprogress": "",
+    "fast-render": "",
+    "spin": "",
+    "fontawesome4": ""
   }
 }
