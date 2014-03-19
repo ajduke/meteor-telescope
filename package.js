@@ -27,6 +27,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/collections/settings.js', ['server', 'client']);
   api.add_files('lib/telescope-integration/collections/users.js', ['server', 'client']);
 
+
   // adding the required file for package
   api.add_files(['lib/telescope-integration/lib/analytics.js',
     'lib/telescope-integration/lib/events.js',
@@ -37,16 +38,27 @@ Package.on_use(function (api) {
     'lib/telescope-integration/lib/users.js',
     'lib/telescope-integration/lib/deepExtend.js',
     'lib/telescope-integration/lib/gravatar.js',
-    'lib/telescope-integration/lib/Markdown.Converter.js',
     'lib/telescope-integration/lib/permissions.js',
     'lib/telescope-integration/lib/scoring.js',
     'lib/telescope-integration/lib/vote.js'],
     ['server', 'client']);
 
+
+// adding the required packages
+//  api.add_files(['lib/telescope-integration/packages/mailchimp/mailchimp.js'], 'server');
+//  api.add_files(['lib/telescope-integration/packages/telescope-i18n/i18n.js'], ['client', 'server']);
+//  api.add_files('lib/telescope-integration/packages/rss/rss.js', 'server');
+//
+//  api.export('MailChimpAPI');
+//  api.export('i18n');
+//  api.export('RSS');
+
   api.add_files(['lib/telescope-integration/lib/locales/fr.js',
     'lib/telescope-integration/lib/locales/en.js',
     'lib/telescope-integration/lib/locales/es.js',
     'lib/telescope-integration/lib/locales/zh.js'], 'server');
+
+
 
   // view/admin
   api.add_files('lib/telescope-integration/client/views/admin/categories.html', 'client');
@@ -87,6 +99,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/views/common/layout.js', 'client');
   api.add_files('lib/telescope-integration/client/views/common/nav.css', 'client');
   api.add_files('lib/telescope-integration/client/views/common/nav.html', 'client');
+  api.add_files('lib/telescope-integration/client/views/common/nav.js', 'client');
   api.add_files('lib/telescope-integration/client/views/common/search.html', 'client');
   api.add_files('lib/telescope-integration/client/views/common/search.js', 'client');
 
@@ -152,6 +165,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/helpers/config.js', 'client');
   api.add_files('lib/telescope-integration/client/helpers/handlebars.js', 'client');
 
+  api.add_files('lib/telescope-integration/client/js/mixpanel.js', 'client');
   api.add_files('lib/telescope-integration/client/js/autolink.js', 'client');
   api.add_files('lib/telescope-integration/client/js/bootstrap-datepicker.js', 'client');
   api.add_files('lib/telescope-integration/client/js/jquery.exists.js', 'client');
@@ -160,9 +174,9 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/js/jquery.sharrre-1.3.2.min.js', 'client');
   api.add_files('lib/telescope-integration/client/js/jquery-ui-autocomplete.js', 'client');
   api.add_files('lib/telescope-integration/client/js/jquery.xdomainajax.js', 'client');
-  api.add_files('lib/telescope-integration/client/js/Markdown.Editor.js', 'client');
-  api.add_files('lib/telescope-integration/client/js/Markdown.Sanitizer.js', 'client');
-  api.add_files('lib/telescope-integration/client/js/mixpanel.js', 'client');
+
+  api.add_files('lib/telescope-integration/client/models/setting.js', 'client');
+
   api.add_files('lib/telescope-integration/client/js/regex_filter.js', 'client');
 
   api.add_files('lib/telescope-integration/client/login.html', 'client');
@@ -171,7 +185,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/main.js', 'client');
 
 
-  api.add_files('lib/telescope-integration/client/models/setting.js', 'client');
+
 
   // stylesheet
   api.add_files('lib/telescope-integration/client/stylesheets/screen.css', 'client');
@@ -198,7 +212,6 @@ Package.on_use(function (api) {
   api.use(['jquery',
     'backbone',
     'accounts-base',
-    'accounts-ui',
     'accounts-password',
     'accounts-twitter',
     'spiderable',
@@ -206,17 +219,23 @@ Package.on_use(function (api) {
     'database-forms',
     'crypto-md5',
     'momentjs',
-    'standard-app-packages',
     'rss',
-    'iron-router',
-    'mailchimp',
-    'nprogress',
     'telescope-i18n',
+    'mailchimp',
+    'standard-app-packages',
+    'iron-router',
+    'nprogress',
     'fast-render',
     'spin',
     'bootstrap-3',
     'fontawesome4'
-
   ], ['client', 'server']);
 
+
+
+});
+
+Npm.depends({
+  "mailchimp": "1.0.3",
+  "rss": '0.0.4'
 });
