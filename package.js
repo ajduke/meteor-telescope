@@ -18,6 +18,8 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/server/users.js', 'server');
 
 
+  api.add_files('lib/telescope-integration/lib/permissions.js',['server','client'])
+
   api.add_files('lib/telescope-integration/collections/categories.js', ['server', 'client']);
   api.add_files('lib/telescope-integration/collections/comments.js', ['server', 'client']);
   api.add_files('lib/telescope-integration/collections/errors.js', ['server', 'client']);
@@ -38,10 +40,11 @@ Package.on_use(function (api) {
     'lib/telescope-integration/lib/users.js',
     'lib/telescope-integration/lib/deepExtend.js',
     'lib/telescope-integration/lib/gravatar.js',
-    'lib/telescope-integration/lib/permissions.js',
     'lib/telescope-integration/lib/scoring.js',
     'lib/telescope-integration/lib/vote.js'],
     ['server', 'client']);
+
+
 
 
 // adding the required packages
