@@ -4,6 +4,11 @@ Package.describe({
 
 Package.on_use(function (api) {
 
+  api.export('AppConfig');
+  api.export('telescopeRoutes');
+
+
+  api.add_files('lib/telescope-integration/lib/main.js', ['server','client']);
   // server folder files
   api.add_files('lib/telescope-integration/server/api.js', 'server');
   api.add_files('lib/telescope-integration/server/email.js', 'server');
@@ -34,7 +39,6 @@ Package.on_use(function (api) {
   api.add_files(['lib/telescope-integration/lib/analytics.js',
     'lib/telescope-integration/lib/events.js',
     'lib/telescope-integration/lib/helpers.js',
-    'lib/telescope-integration/lib/main.js',
     'lib/telescope-integration/lib/parameters.js',
     'lib/telescope-integration/lib/router.js',
     'lib/telescope-integration/lib/users.js',
@@ -64,10 +68,10 @@ Package.on_use(function (api) {
 
 
   // view/admin
-  api.add_files('lib/telescope-integration/client/views/admin/categories.html', 'client');
-  api.add_files('lib/telescope-integration/client/views/admin/categories.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/category_item.html', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/category_item.js', 'client');
+  api.add_files('lib/telescope-integration/client/views/admin/categories.html', 'client');
+  api.add_files('lib/telescope-integration/client/views/admin/categories.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.html', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/toolbox.html', 'client');
@@ -162,7 +166,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/views/users/users.js', 'client');
 
 
-// client directory
+  // client directory
   api.add_files('lib/telescope-integration/client/helpers/config.js', 'client');
   api.add_files('lib/telescope-integration/client/helpers/handlebars.js', 'client');
 
