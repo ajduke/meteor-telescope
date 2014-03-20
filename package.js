@@ -67,8 +67,6 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/views/admin/category_item.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.html', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.js', 'client');
-  api.add_files('lib/telescope-integration/client/views/admin/settings.html', 'client');
-  api.add_files('lib/telescope-integration/client/views/admin/settings.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/toolbox.html', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/toolbox.js', 'client');
 
@@ -175,7 +173,6 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/js/jquery-ui-autocomplete.js', 'client');
   api.add_files('lib/telescope-integration/client/js/jquery.xdomainajax.js', 'client');
 
-  api.add_files('lib/telescope-integration/client/models/setting.js', 'client');
 
   api.add_files('lib/telescope-integration/client/js/regex_filter.js', 'client');
 
