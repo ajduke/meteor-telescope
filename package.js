@@ -4,12 +4,22 @@ Package.describe({
 
 Package.on_use(function (api) {
 
-  api.export('AppConfig');
+  api.export('TelescopeConfig');
   api.export('telescopeRoutes');
+
+  api.export('MailChimpAPI');
+  api.export('i18n');
+  api.export('RSS');
+
+  // adding the required packages
+  api.add_files(['lib/telescope-integration/packages/mailchimp/mailchimp.js'], 'server');
+  api.add_files(['lib/telescope-integration/packages/telescope-i18n/i18n.js'], ['client', 'server']);
+  api.add_files('lib/telescope-integration/packages/rss/rss.js', 'server');
 
 
   api.add_files('lib/telescope-integration/lib/main.js', ['server','client']);
   // server folder files
+  api.add_files('lib/telescope-integration/server/toolbox.js', 'server');
   api.add_files('lib/telescope-integration/server/api.js', 'server');
   api.add_files('lib/telescope-integration/server/email.js', 'server');
   api.add_files('lib/telescope-integration/server/invites.js', 'server');
@@ -19,13 +29,11 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/server/rss.js', 'server');
   api.add_files('lib/telescope-integration/server/scoring.js', 'server');
   api.add_files('lib/telescope-integration/server/search.js', 'server');
-  api.add_files('lib/telescope-integration/server/toolbox.js', 'server');
   api.add_files('lib/telescope-integration/server/users.js', 'server');
 
 
-  api.add_files('lib/telescope-integration/lib/permissions.js',['server','client'])
 
-  api.add_files('lib/telescope-integration/collections/categories.js', ['server', 'client']);
+  api.add_files('lib/telescope-integration/lib/permissions.js',['server','client'])
   api.add_files('lib/telescope-integration/collections/comments.js', ['server', 'client']);
   api.add_files('lib/telescope-integration/collections/errors.js', ['server', 'client']);
   api.add_files('lib/telescope-integration/collections/notifications.js', ['server', 'client']);
@@ -48,24 +56,17 @@ Package.on_use(function (api) {
     'lib/telescope-integration/lib/vote.js'],
     ['server', 'client']);
 
+  api.add_files('lib/telescope-integration/collections/categories.js', ['server', 'client']);
 
 
 
-// adding the required packages
-//  api.add_files(['lib/telescope-integration/packages/mailchimp/mailchimp.js'], 'server');
-//  api.add_files(['lib/telescope-integration/packages/telescope-i18n/i18n.js'], ['client', 'server']);
-//  api.add_files('lib/telescope-integration/packages/rss/rss.js', 'server');
-//
-//  api.export('MailChimpAPI');
-//  api.export('i18n');
-//  api.export('RSS');
+
+
 
   api.add_files(['lib/telescope-integration/lib/locales/fr.js',
     'lib/telescope-integration/lib/locales/en.js',
     'lib/telescope-integration/lib/locales/es.js',
     'lib/telescope-integration/lib/locales/zh.js'], 'server');
-
-
 
   // view/admin
   api.add_files('lib/telescope-integration/client/views/admin/category_item.html', 'client');
@@ -74,11 +75,8 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/views/admin/categories.js', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.html', 'client');
   api.add_files('lib/telescope-integration/client/views/admin/logs.js', 'client');
-  api.add_files('lib/telescope-integration/client/views/admin/toolbox.html', 'client');
-  api.add_files('lib/telescope-integration/client/views/admin/toolbox.js', 'client');
 
   // views/comment
-  api.add_files('lib/telescope-integration/client/views/comments/comment_deleted.html', 'client');
   api.add_files('lib/telescope-integration/client/views/comments/comment_edit.html', 'client');
   api.add_files('lib/telescope-integration/client/views/comments/comment_edit.js', 'client');
   api.add_files('lib/telescope-integration/client/views/comments/comment_form.html', 'client');
@@ -106,6 +104,7 @@ Package.on_use(function (api) {
   api.add_files('lib/telescope-integration/client/views/common/nav.html', 'client');
   api.add_files('lib/telescope-integration/client/views/common/nav.js', 'client');
   api.add_files('lib/telescope-integration/client/views/common/search.html', 'client');
+  api.add_files('lib/telescope-integration/client/views/common/search.css', 'client');
   api.add_files('lib/telescope-integration/client/views/common/search.js', 'client');
 
 
@@ -131,7 +130,6 @@ Package.on_use(function (api) {
 
 
   // views/posts
-  api.add_files('lib/telescope-integration/client/views/posts/post_deleted.html', 'client');
   api.add_files('lib/telescope-integration/client/views/posts/post_edit.html', 'client');
   api.add_files('lib/telescope-integration/client/views/posts/post_edit.js', 'client');
   api.add_files('lib/telescope-integration/client/views/posts/post_item.css', 'client');
@@ -223,9 +221,6 @@ Package.on_use(function (api) {
     'database-forms',
     'crypto-md5',
     'momentjs',
-    'rss',
-    'telescope-i18n',
-    'mailchimp',
     'standard-app-packages',
     'iron-router',
     'nprogress',
@@ -234,6 +229,7 @@ Package.on_use(function (api) {
     'bootstrap-3',
     'fontawesome4'
   ], ['client', 'server']);
+
 
 
 
