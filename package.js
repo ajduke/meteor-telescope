@@ -181,13 +181,8 @@ Package.on_use(function (api) {
 
   api.add_files('lib/telescope-integration/client/js/regex_filter.js', 'client');
 
-  api.add_files('lib/telescope-integration/client/login.html', 'client');
-  api.add_files('lib/telescope-integration/client/login.js', 'client');
   api.add_files('lib/telescope-integration/client/main.html', 'client');
   api.add_files('lib/telescope-integration/client/main.js', 'client');
-
-
-
 
   // stylesheet
   api.add_files('lib/telescope-integration/client/stylesheets/screen.css', 'client');
