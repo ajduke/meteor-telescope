@@ -1,3 +1,0 @@
-[submodule "lib/telescope-integration"]
-	path = lib/telescope-integration
-	url = git@github.com:ajduke/telescope-integration.git
