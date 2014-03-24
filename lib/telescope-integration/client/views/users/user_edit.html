@@ -1,0 +1,144 @@
+<template name="telescope_user_edit">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      {{#with user}}
+
+      <fieldset class="well" style="background-color: #fff">
+        {{#if profileIncomplete}}
+        <div class="alert text-center alert-danger">
+          Please complete your profile below before continuing.
+        </div>
+        {{/if}}
+
+        <h3 style="color: #999"> Edit Profile Details </h3>
+
+      <form class="form-horizontal" role="form">
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Username</label>
+          <div class="col-sm-9">
+            <input id="username" class="form-control" name="username" disabled="disabled" type="text" value="{{userName}}"/>
+            <p class="small form-control-static">Profile URL: {{profileUrl}}</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Display Name</label>
+          <div class="col-sm-9">
+            <input class="form-control" name="name" type="text" value="{{profile.name}}"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Email</label>
+          <div class="col-sm-9">
+            <input  class="form-control" name="email" type="text" value="{{userEmail}}"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Bio</label>
+          <div class="col-sm-9">
+            <textarea name="bio" rows="6"  class="form-control" style="resize: none" type="text">{{profile.bio}}</textarea>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Twitter Username</label>
+          <div class="col-sm-9">
+            <input name="twitter" class="form-control" type="text" value="{{getTwitter}}"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">GitHub Username</label>
+          <div class="col-sm-9">
+            <input name="github" class="form-control" type="text" value="{{getGitHub}}"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Site</label>
+          <div class="col-sm-9">
+            <input name="site" class="form-control" type="text" value="{{profile.site}}"/>
+          </div>
+        </div>
+
+        <h3 style="color: #999">Change Password?</h3>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Old Password</label>
+          <div class="col-sm-9">
+            <input name="old_password" class="form-control" type="password" value=""/>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">New Password</label>
+          <div class="col-sm-9">
+            <input name="new_password" class="form-control" type="password" value=""/>
+          </div>
+        </div>
+
+        <div class="form-group">
+        <label class="col-sm-3 control-label">Email Notifications</label>
+
+        <div class="col-sm-9">
+          {{#if isAdmin}}
+          <label class="checkbox">
+            <input id="notifications_users" type="checkbox" name="notifications_users"
+            {{hasNotificationsUsers}} /> New Users
+          </label>
+          {{/if}}
+          <label class="checkbox">
+            <input id="notifications_posts" type="checkbox" name="notifications_posts"
+            {{hasNotificationsPosts}} /> New Posts
+          </label>
+          <label class="checkbox">
+            <input id="notifications_comments" type="checkbox" name="notifications_comments"
+            {{hasNotificationsComments}} /> Comments on my posts
+          </label>
+          <label class="checkbox">
+            <input id="notifications_replies" type="checkbox" name="notifications_replies"
+            {{hasNotificationsReplies}} /> Replies to my comments
+          </label>
+        </div>
+       </div>
+
+
+        {{#if isAdmin}}
+        <h3>Invites</h3>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" style="color: #999">Invites</label>
+          <div class="col-sm-9">
+            <input name="inviteCount" class="form-control" type="text" value="{{inviteCount}}"/>
+          </div>
+        </div>
+        {{/if}}
+
+
+        <div class="form-group">
+          <span class="col-sm-4">
+
+
+          </span>
+
+
+          <span class="col-sm-4"></span>
+          <span class="col-sm-4">
+             <input type="submit" class=" btn btn-default form-control" value=" Submit" />
+          </span>
+        </div>
+
+      </form>
+      </fieldset>
+      {{/with}}
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
+</template>

@@ -1,0 +1,18 @@
+<template name="telescope_layout">
+  <style>
+      body{
+          background-color: {{bgColor}};
+      }
+  </style>
+  <div class="outer-wrapper {{pageName}} telescope-wrapper">
+      {{> telescope_nav}}
+      {{> telescope_error}}
+      {{yield}}
+      {{#if enabledNotification}}
+      {{> telescope_notifications}}
+      {{/if}}
+      {{> telescope_footer}}
+      <div class="overlay hidden"></div>
+    {{{extraCode}}}
+  </div>
+</template>

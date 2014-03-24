@@ -1,0 +1,38 @@
+<template name="telescope_posts_list">
+
+
+  <div class="container list">
+    <div class="grid-block">
+      {{#if isCategoryPage}}
+      Showing posts tagged with <strong>
+      <a href="#" class="btn btn-default btn-xs category-{{slug}}" style="font-size: 12px;padding-top: 0px">
+        {{getCategorySlug}}</a>
+      </strong>
+      {{else}}
+        {{#if isSearchPage}}
+         Showing search results for <strong>{{searchQueryTerm}}</strong>
+        {{else}}
+          Showing <strong>{{currentPage}}</strong> Posts
+        {{/if}}
+      {{/if}}
+    </div>
+
+    {{#each posts}}
+    {{> telescope_post_item}}
+    {{/each}}
+
+  {{#if hasMorePosts}}
+    <div class="row" style="margin-bottom: 12px">
+      <div class="col-sm-3">
+
+      </div>
+      <span class="col-sm-6">
+        <a class="btn btn-default btn-block btn-lg" href="{{loadMoreUrl}}">Load more</a>
+      </span>
+      <div class="col-sm-3">
+
+      </div>
+    </div>
+  {{/if}}
+  </div>
+</template>

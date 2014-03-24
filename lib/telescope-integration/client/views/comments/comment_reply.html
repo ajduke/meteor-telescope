@@ -1,0 +1,19 @@
+<template name="telescope_comment_reply">
+  {{#if canComment "replace"}}
+  <div class="post container ">
+    
+    {{#with post}}
+      {{> telescope_post_item}}
+    {{/with}}
+
+    {{#with comment}}
+      <ul class="selected-comment">
+       {{> telescope_comment_item}}
+      </ul>
+    {{/with}}
+
+    {{> telescope_comment_form}}
+    
+  </div>
+  {{/if}}
+</template>

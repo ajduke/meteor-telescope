@@ -1,0 +1,98 @@
+<template name="telescope_post_edit">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <!--main content area-->
+        {{#with post}}{{#isolate}}
+        <fieldset class="well" style="background-color: white">
+          <div class="page-header">
+            <h3 class="text-center text"> Edit Post Details</h3>
+          </div>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-3 control-label ">Created</label>
+            <div class="col-sm-9"><p class="form-control-static">{{created}}</p></div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Title</label>
+            <div class="col-sm-9"><input id="title" class="form-control" type="text" value="{{headline}}" /></div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3  control-label ">URL</label>
+            <div class="col-sm-9"><input id="url" class="form-control" type="text" value="{{url}}" /></div>
+          </div>
+          {{#if shorten}}
+          <div class="form-group">
+            <label class="col-sm-3  control-label">Short URL</label>
+            <div class="col-sm-9"><input id="short-url" class="form-control" type="text" value="{{shortUrl}}" /></div>
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <label class="col-sm-3 control-label ">Body</label>
+            <div class="col-sm-9" ><textarea rows="6" id="body" value=""  class="editor form-control" class="input-xlarge">{{body}}</textarea></div>
+          </div>
+
+          {{#if enableCategories}}
+          {{#if categoriesEnabled}}
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Categories</label>
+            <div class="col-sm-9">
+              {{#each categories}}
+              <label class="checkbox-inline">
+                <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" {{checked}} /> {{name}}
+              </label>
+              {{/each}}
+            </div>
+          </div>
+          {{/if}}
+          {{/if}}
+
+          {{#if isAdmin}}
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Inactive?</label>
+            <div class="col-sm-9">
+              {{inactive}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Sticky?</label>
+            <div class="col-sm-9">
+              <input type="checkbox"  name="sticky" id="sticky" {{isSticky}} />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Status</label>
+            <div class="col-sm-9">
+              <label class="radio-inline">
+                <input id="status_pending" type="radio" value="1" name="status" {{hasStatusPending}} /> Pending
+              </label>
+              <label class="radio-inline">
+                <input id="status_approved" type="radio" value="2" name="status" {{hasStatusApproved}} /> Approved
+              </label>
+            </div>
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <span class="col-md-3"></span>
+            <span class="col-md-3">
+              <input type="submit" class="form-control" value="Submit" />
+            </span>
+            <span class="col-md-3"></span>
+            <span class="col-md-3">
+              <button class="btn btn-danger delete-link" href="{{deletedURL}}">Delete Post</button>
+            </span>
+
+
+          </div>
+        </form>
+
+        </fieldset>
+        {{/isolate}}{{/with}}
+      </div>
+
+      <div class="col-md-2"></div>
+
+    </div><!-- end of row -->
+  </div>
+</template>

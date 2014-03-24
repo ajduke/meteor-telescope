@@ -1,0 +1,11 @@
+<template name="telescope_comment_list">
+  {{#if has_comments}}
+      {{#each child_comments}}
+        {{> telescope_comment_item}}
+      {{/each}}
+  {{else}}
+  <div class="grid-block">
+    <p>No comments.</p>
+   </div>
+  {{/if}}
+</template>

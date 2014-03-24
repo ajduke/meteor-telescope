@@ -1,0 +1,90 @@
+<template name="telescope_nav">
+  <div class="container">
+    <nav class="navbar navbar-default nav-main" role="navigation" >
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-header nav-hh" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand nav-header-strong" href="#">{{AppTitle}}</a>
+      </div>
+      <!-- Brand and toggle get grouped for better mobile display -->
+
+
+      <div class="collapse navbar-collapse nav-col" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">View <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="top" href="{{topURL}}">Top</a></li>
+              <li><a class="new" href="{{newURL}}">New</a></li>
+              <li><a class="best" href="{{bestURL}}">Best</a></li>
+              <li><a class="digest" href="{{digestURL}}">Digest</a></li>
+            </ul>
+          </li>
+          {{#if enableCategories}}
+          {{#if hasCategories}}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dLabel">
+              {{# each categories}}
+              <li><a class="pending" href="{{categoryLink}}">{{name}}</a></li>
+              {{/each}}
+            </ul>
+          </li>
+          {{/if}}
+          {{/if}}
+
+          {{#if isAdmin}}
+          <li class="dropdown">
+            <a class="admin" href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b
+              class="caret"></b></a>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dLabel">
+              <li><a class="pending" href="{{pendingURL}}">Pending</a></li>
+              <li><a class="users" href="{{allUsersURL}}">Users</a></li>
+              {{#if enableCategories}}
+              <li><a class="categories" href="{{categoriesURL}}">Categories</a></li>
+              {{/if}}
+              <li><a class="logs" href="{{logsURL}}">Logs</a></li>
+            </ul>
+          </li>
+          {{/if}}
+          <li>
+            {{> telescope_search}}
+          </li>
+        </ul>
+
+        {{#if currentUser}}
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="navbar-text"> Signed in as {{loggedInUserName}}</li>
+          <li class="dropdown">
+            <a class="admin" href="#" class="dropdown-toggle " data-toggle="dropdown">
+              <b>Profile</b><b class="caret"></b></a>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="dLabel">
+              <li><a href={{viewProfileURL}} class="account-link button">View Profile</a></li>
+              <li><a href={{editProfileURL}} class="account-link button">Edit Account</a></li>
+              <li><a class="signout" href="#">Sign Out</a></li>
+            </ul>
+          </li>
+          <li class="new-post"> <span class="btn-xs"> <a id="submit" class="btn btn-default" href="{{submitURL}}"><strong>New Post</strong></a> </span></li>
+        </ul>
+        {{else}}
+        <ul class="nav navbar-nav navbar-right ">
+          <li class="navbar-text loginPost" >Login to Post</li>
+        </ul>
+        {{/if}}
+
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </nav>
+  </div>
+</template>
+
+
+

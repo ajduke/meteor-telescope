@@ -1,0 +1,15 @@
+<template name="telescope_comment_page">
+  {{#if canView}}
+  <div class="post container">
+    
+    {{#with post}}
+      {{> telescope_post_item}}
+    {{/with}}
+
+    {{#with comment}}
+       {{> telescope_comment_item}}
+    {{/with}}
+
+  </div>
+  {{/if}}
+</template>

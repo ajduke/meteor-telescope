@@ -1,0 +1,23 @@
+<template name="telescope_notifications">
+	{{#if currentUser}}
+		{{#if canPost}}
+		<div class="notifications notifications-open">
+			<a href="#" class="notifications-toggle {{notification_class}}">
+        {{#if notification_count}}
+        <span class="glyphicon glyphicon-tasks" style="font-size: 1.8em"></span>
+
+        {{else}}
+        <span class="glyphicon glyphicon-tasks" style="font-size: 1.8em"> </span>
+        {{/if}}
+
+			</a>
+			<a href="#" class="mark-as-read">Mark all as read</a>
+      <div style="height: 100%;overflow: auto;">
+			{{#each notifications}}
+				{{> telescope_notification_item}}
+		    {{/each}}
+      </div>
+		</div>
+		{{/if}}
+	{{/if}}
+</template>

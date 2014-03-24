@@ -1,0 +1,48 @@
+<template name="telescope_categories">
+  <div class="row">
+
+    <div class="col-sm-4 col-md-4"></div>
+    <div class="col-sm-4 col-md-4">
+      <fieldset class="well" style="background-color: #fff">
+        <h2 class="text-center">Manage Categories</h2>
+        <fieldset class="well">
+        <form class="form-horizontal">
+
+            <h3 class="text-center">Add new category</h3>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Name</label>
+
+              <div class="col-sm-9 ">
+                <input id="name" type="text" class="form-control" value=""/>
+              </div>
+            </div>
+            <div class="form-group">
+              <span class="col-sm-3"></span>
+             <span class="col-sm-3">
+               <input type="submit" class="btn btn-default btn-block form-control submit" value="Submit"/>
+             </span>
+              <span class="col-sm-6"></span>
+            </div>
+
+
+        </form>
+        </fieldset>
+        <fieldset class="well">
+          {{#if categories}}
+          <div class="text text-center" style="padding-bottom: 10px;"> Edit the categories here and keep it empty if you want to remove it</div>
+          {{/if}}
+          {{#each categories}}
+          {{> telescope_category_item}}
+          {{else}}
+          <div class="text text-center" style="padding-bottom: 10px;"> No Categories to show</div>
+          {{/each}}
+        </fieldset>
+
+
+      </fieldset>
+    </div>
+
+    <div class="col-sm-4 col-md-4"></div>
+  </div>
+</template>
