@@ -1,0 +1,13 @@
+.bio-text {
+    padding-top: 20px;
+}
+
+.no-bio {
+    color: #aaa;
+    padding: 20px;
+    border: 1px solid #CECBCB;
+    font-size: 1.0em;
+    padding-top: 20px;
+    padding-left: 90px;
+    margin-top: 20px;
+}

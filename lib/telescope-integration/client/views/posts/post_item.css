@@ -1,3 +1,29 @@
+
+
+
+.post-message {
+    color:#666;
+    line-height: 26px;
+    background: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 18px; }
+/* line 232, ../sass/modules/_posts.scss */
+.list .post-message {
+    display: none; }
+
+
 .post-upvote-alt
 {
     color:#5e5e5e;

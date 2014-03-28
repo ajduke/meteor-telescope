@@ -917,13 +917,7 @@ body.pageslide-open {
         /*pointer-events: none; }*/
 
 /* line 227, ../sass/modules/_posts.scss */
-.post-message {
-  padding: 20px;
-  margin-bottom: 10px;
-  font-size: 1.1em; }
-  /* line 232, ../sass/modules/_posts.scss */
-  .list .post-message {
-    display: none; }
+
 
 /* line 236, ../sass/modules/_posts.scss */
 .share-options {

@@ -1,5 +1,25 @@
 .userImg  {
-    margin: 10px 12px;
+    margin: 16px 15px 10px 22px;
+    /*float: right;*/
+    /*width: 40px;*/
+    /*padding: 20px 15px;*/
+}
+
+
+.upvoted .upvote i {
+    /*color : #fff;*/
+}
+.sh-square-comment{
+    margin: 5px 15px 10px 22px;
+    float: left;
+    cursor: pointer;
+    width:48px;
+    height:28px;
+    /*margin: 12px 5px;*/
+    /*margin-right:22px;*/
+    text-align:center!important;
+    background-color:#E6E6E6;
+    padding:5px 0
 }
 
 .votes{
@@ -9,6 +29,7 @@
     padding: 4px 4px;
 }
 
+
 .votes-lg{
  font-size: 0.9em;
 }
@@ -17,6 +38,7 @@
     margin: 10px 0;
 }
 .cmt-body{
+    color: #666;
     padding: 8px 5px;
 }
 
