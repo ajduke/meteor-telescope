@@ -1,4 +1,4 @@
-.userImg  {
+.telescope-wrapper * .userImg  {
     margin: 16px 15px 10px 22px;
     /*float: right;*/
     /*width: 40px;*/
@@ -6,10 +6,10 @@
 }
 
 
-.upvoted .upvote i {
+.telescope-wrapper * .upvoted .upvote i {
     /*color : #fff;*/
 }
-.sh-square-comment{
+.telescope-wrapper * .sh-square-comment{
     margin: 5px 15px 10px 22px;
     float: left;
     cursor: pointer;
@@ -22,7 +22,7 @@
     padding:5px 0
 }
 
-.votes{
+.telescope-wrapper * .votes{
     margin: 5px 12px;
     background-color: #E6E6E6;
     color: #fff;
@@ -30,19 +30,19 @@
 }
 
 
-.votes-lg{
+.telescope-wrapper * .votes-lg{
  font-size: 0.9em;
 }
 
-.comment-info{
+.telescope-wrapper * .comment-info{
     margin: 10px 0;
 }
-.cmt-body{
+.telescope-wrapper * .cmt-body{
     color: #666;
     padding: 8px 5px;
 }
 
-.comment-main{
+.telescope-wrapper * .comment-main{
     margin-left: 55px;
     margin-bottom: 10px;
     overflow: hidden;

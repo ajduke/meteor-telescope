@@ -1,9 +1,9 @@
-.search input {
+.telescope-wrapper * .search input {
     border-radius: 20px;
     background-color: #f8f8f8;
 }
 
-.search input:focus{
+.telescope-wrapper * .search input:focus{
     background-color: #fff;
     box-shadow: none;
     outline: none;

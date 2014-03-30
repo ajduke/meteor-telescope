@@ -1,8 +1,8 @@
-.bio-text {
+.telescope-wrapper * .bio-text {
     padding-top: 20px;
 }
 
-.no-bio {
+.telescope-wrapper * .no-bio {
     color: #aaa;
     padding: 20px;
     border: 1px solid #CECBCB;

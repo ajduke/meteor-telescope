@@ -1,7 +1,7 @@
 
 
 
-.post-message {
+.telescope-wrapper * .post-message {
     color:#666;
     line-height: 26px;
     background: #fff;
@@ -24,7 +24,7 @@
     display: none; }
 
 
-.post-upvote-alt
+.telescope-wrapper * .post-upvote-alt
 {
     color:#5e5e5e;
     padding: 20px;
@@ -32,11 +32,11 @@
     height: 69px;
 }
 
-.post-header{
+.telescope-wrapper * .post-header{
   padding: 5px;margin-bottom: 5px;
 }
 
-.glyphicon-lg{
+.telescope-wrapper * .glyphicon-lg{
     font-size:1.5em;
     -webkit-transition: 0.3s ;
     -moz-transition: 0.3s ;
@@ -44,7 +44,7 @@
     -o-transition: 0.3s ;transition: 0.3s ;
 
 }
-.glyphicon-sm{
+.telescope-wrapper * .glyphicon-sm{
     font-size:1.4em;;color:#a4a9ab;padding-top: 9px;
     -webkit-transition: 0.3s ;
     -moz-transition: 0.3s ;
@@ -52,48 +52,40 @@
     -o-transition: 0.3s ;transition: 0.3s ;
 }
 
-.upvote-lnk.sh-square:hover .glyphicon-chevron-up{
+.telescope-wrapper * .upvote-lnk.sh-square:hover .glyphicon-chevron-up{
     color: #fff;
 }
 
-.upvote-lnk.sh-square:hover .glyphicon-sm{
+.telescope-wrapper * .upvote-lnk.sh-square:hover .glyphicon-sm{
     padding-top: 4px;
 }
 
-.sh-square{
+.telescope-wrapper * .sh-square{
     cursor: pointer;
     width:35px;height:80px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0
 }
-.sh-square:hover{
+.telescope-wrapper * .sh-square:hover{
     background-color: #ccc;
 }
 
 
-.square:hover .glyphicon-arrow-right{
+.telescope-wrapper * .square:hover .glyphicon-arrow-right{
     color: #fff;
 }
 
-.blockquote-box.blockquote-primary .square:hover .glyphicon-lg{
+.telescope-wrapper * .blockquote-box.blockquote-primary .square:hover .glyphicon-lg{
     padding-left: 5px;
 }
 
-.blockquote-box.blockquote-primary .square:hover{
+.telescope-wrapper * .blockquote-box.blockquote-primary .square:hover{
     background-color: #ccc;
 }
-.blockquote-box.blockquote-primary .square:hover .discussText{
+.telescope-wrapper * .blockquote-box.blockquote-primary .square:hover .discussText{
     color: #fff;
 }
 
-.blockquote-box{margin-bottom:4px}
-.tp-padding{margin-top: 11px}
-.blockquote-box .square{width:60px;min-height:35px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:8px 0}
-.blockquote-box.blockquote-primary{border-color:#357EBD}
-.blockquote-box.blockquote-primary .square{background-color:#e7e7e7;color:#a4a9ab}
-.blockquote-box.blockquote-success{border-color:#4CAE4C}
-.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
-.blockquote-box.blockquote-info{border-color:#46B8DA}
-.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
-.blockquote-box.blockquote-warning{border-color:#EEA236}
-.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
-.blockquote-box.blockquote-danger{border-color:#D43F3A}
-.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
+.telescope-wrapper * .blockquote-box{margin-bottom:4px}
+.telescope-wrapper * .tp-padding{margin-top: 11px}
+.telescope-wrapper * .blockquote-box .square{width:60px;min-height:35px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:8px 0}
+.telescope-wrapper * .blockquote-box.blockquote-primary{border-color:#357EBD}
+.telescope-wrapper * .blockquote-box.blockquote-primary .square{background-color:#e7e7e7;color:#a4a9ab}

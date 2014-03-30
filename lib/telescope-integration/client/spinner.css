@@ -1,4 +1,4 @@
-#nprogress .bar {
+.telescope-wrapper * #nprogress .bar {
     background: #10BD8F;
 
     position: fixed;
@@ -11,7 +11,7 @@
 }
 
 /* Remove these to get rid of the spinner */
-#nprogress .spinner {
+.telescope-wrapper * #nprogress .spinner {
     color: #10BD8F;
     display: block;
     position: fixed;
@@ -20,7 +20,7 @@
     right: 15px;
 }
 
-#nprogress .spinner-icon {
+.telescope-wrapper * #nprogress .spinner-icon {
     width: 18px;
     height: 18px;
     box-sizing: border-box;

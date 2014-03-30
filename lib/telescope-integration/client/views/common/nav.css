@@ -1,52 +1,45 @@
-.strong{
+.telescope-wrapper * .strong{
   font-weight: 700;
 }
 
-.navbar{
+.telescope-wrapper * .navbar{
     border-radius: 0 0 4px 4px;
     border-top: none;
 }
 
-.navbar-collapse.collapse{
+.telescope-wrapper * .navbar-collapse.collapse{
     padding-bottom: 10px;
 }
 
-.nav-header-strong{
+.telescope-wrapper * .nav-header-strong{
   font-size: 28px;
   margin-top: 8px;
   margin-right: 20px;
 }
 
-.navbar-default .navbar-nav > li > a {
+.telescope-wrapper * .navbar-default .navbar-nav > li > a {
     color: #10BD8F;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.telescope-wrapper * .navbar-default .navbar-nav > li > a:hover {
     color: #06956F;
 }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+.telescope-wrapper * .navbar-default .navbar-nav > .open > a, .telescope-wrapper * .navbar-default .navbar-nav > .open > a:hover,.telescope-wrapper * .navbar-default .navbar-nav > .open > a:focus{
     color: #06956F;
 }
 
-.nav-hh{
-  /*padding: 5px 0px;*/
-}
 
-.nav-main{
-  /*padding: 5px 3px;*/
-}
-
-.nav-col{
+.telescope-wrapper * .nav-col{
   padding-top: 9px;
 }
 
-.new-post{
+.telescope-wrapper * .new-post{
   padding-top: 9px;
   padding-right: 4px;
   font-weight: 700;
 }
 
-.loginPost{
+.telescope-wrapper * .loginPost{
     padding: 10px 15px;
     font-size: 1.0em;
     color: #CECBCB;

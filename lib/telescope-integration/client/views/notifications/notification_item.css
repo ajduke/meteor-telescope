@@ -1,4 +1,4 @@
-.notification-timestamp {
+.telescope-notification-timestamp {
     color: #b3c1c6;
     font-size: 12px;
 }
@@ -8,7 +8,7 @@ div.read{
     background: #f3f3f3;
 }
 
-div.notification-text{
+div.telescope-notification-text{
     padding: 10px;
     border-bottom: 1px solid #dfdbdb;
     font-size: 13px;
