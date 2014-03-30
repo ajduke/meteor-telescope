@@ -3,12 +3,11 @@
 		{{#if canPost}}
 		<div class="telescope-notifications telescope-notifications-open">
 			<a href="#" class="telescope-notifications-toggle {{notification_class}}">
+        <span class="glyphicon glyphicon-tasks" style="font-size: 1.8em;float: left"></span>
         {{#if notification_count}}
-        <span class="glyphicon glyphicon-tasks" style="font-size: 1.8em"></span>
-
-        {{else}}
-        <span class="glyphicon glyphicon-tasks" style="font-size: 1.8em"> </span>
+          <span class="badge" style="margin-top: 3px;font-size:12px" >{{notification_count}}</span>
         {{/if}}
+
 
 			</a>
 			<a href="#" class="mark-as-read">Mark all as read</a>
