@@ -3,9 +3,7 @@
     <div class="row" style="background-color: #fff">
       <div class="col-md-1">
         <div class="userImg">
-          {{#constant}}
           <div class="img-circle"><img src="{{user_avatar}}"/></div>
-          {{/constant}}
         </div>
 
         <div
@@ -26,11 +24,11 @@
       <div class="col-md-11">
 
         <div class="comment-meta comment-info text-left comment-ruler" style="padding-top: 12px;padding: 10px">
-          <span class="glyphicon glyphicon-comment"> </span>
+          <span class="glyphicon glyphicon-comment"></span>
 
           <a class="comment-username" href="{{profileUrl}}">{{authorName}}</a>
           <span class="comment-time">{{ago}},</span>
-            <span class="points">{{votes}} <span class="unit">points </span> |
+            <span class="points">{{votes}}</span> <span class="unit">points </span> |
             <a href="{{commentLinkUrl}}" class="comment-permalink glyphicon glyphicon-link goto-comment">link</a>
             {{#if can_edit}}
               | <a class="edit-link" href="{{commentEditLinkUrl}}">Edit</a>

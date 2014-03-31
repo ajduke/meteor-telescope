@@ -4,7 +4,6 @@
     <div class="col-sm-2"></div>
 
     <div class="col-sm-8">
-      {{#constant}}
       <fieldset class="well" style="background-color: white">
 
         <div class="page-header">
@@ -32,7 +31,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label">Body</label>
           <div class="col-sm-10" id="">
-            <textarea id="body" rows="6"  value="" class="editor form-control" style="resize: none"/>
+            <textarea id="body" rows="6"  value="" class="editor form-control" style="resize: none"> </textarea>
           </div>
         </div>
 
@@ -53,7 +52,6 @@
         {{/if}}
 
         {{#if isAdmin}}
-        {{#constant}}
         <div class="form-group">
           <label class="col-sm-2 control-label">Sticky?</label>
           <div class="col-sm-10">
@@ -73,7 +71,6 @@
             </label>
           </div>
         </div>
-        {{/constant}}
         {{/if}}
 
         <div class="row">
@@ -88,7 +85,6 @@
       </form>
 
       </fieldset>
-      {{/constant}}
     </div>
 
     <div class="col-sm-2"></div>
