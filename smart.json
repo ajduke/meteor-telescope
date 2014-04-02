@@ -4,17 +4,5 @@
   "homepage": "https://github.com/ajduke/meteor-telescope.git",
   "author": "Abhijeet Sutar <ajduke@about.me>",
   "version": "0.0.1",
-  "git": "https://github.com/ajduke/meteor-telescope.git",
-  "packages": {
-    "bootstrap-3": "",
-    "jquery": "",
-    "database-forms": "",
-    "crypto-md5": "",
-    "momentjs": "",
-    "iron-router": "",
-    "nprogress": "",
-    "fast-render": "",
-    "spin": "",
-    "fontawesome4": ""
-  }
+  "git": "https://github.com/ajduke/meteor-telescope.git"
 }
