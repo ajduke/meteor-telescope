@@ -63,12 +63,10 @@ Package.on_use(function (api) {
   // server folder files
   api.add_files('lib/server/toolbox.js', 'server');
   api.add_files('lib/server/api.js', 'server');
-  api.add_files('lib/server/email.js', 'server');
   api.add_files('lib/server/invites.js', 'server');
   api.add_files('lib/server/migrations.js', 'server');
   api.add_files('lib/server/notifications.js', 'server');
   api.add_files('lib/server/publications.js', 'server');
-  api.add_files('lib/server/rss.js', 'server');
   api.add_files('lib/server/scoring.js', 'server');
   api.add_files('lib/server/search.js', 'server');
   api.add_files('lib/server/users.js', 'server');
@@ -131,7 +129,6 @@ Package.on_use(function (api) {
 
   // views/errors/
   api.add_files('lib/client/views/errors/already_logged_in.html', 'client');
-  api.add_files('lib/client/views/errors/loading.html', 'client');
   api.add_files('lib/client/views/errors/no_account.html', 'client');
   api.add_files('lib/client/views/errors/no_account.js', 'client');
   api.add_files('lib/client/views/errors/no_rights.html', 'client');
