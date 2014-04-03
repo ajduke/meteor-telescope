@@ -6,11 +6,6 @@ Package.describe({
 Package.on_use(function (api) {
 
     api.export('TelescopeConfig',['client','server']);
-    api.export('telescopeRoutes',['client']);
-    api.export('telescopeRoutesServer',['server']);
-    api.export('MailChimpAPI',['client','server']);
-    api.export('RSS',['client','server']);
-    api.export('extend_accounts_create_user',['server']);
 
 // dependecies required by package
     api.use(['templating'], 'client');
@@ -20,21 +15,18 @@ Package.on_use(function (api) {
         'accounts-password',
         'accounts-twitter',
         'spiderable',
-        'email',
-        'database-forms',
         'crypto-md5',
         'momentjs',
         'standard-app-packages',
         'iron-router',
         'nprogress',
         'fast-render',
-        'spin',
         'bootstrap-3',
         'fontawesome4'
     ], ['client', 'server']);
     api.add_files('lib/main.js', ['client','server']);
     // adding the required file for package
-    api.add_files(['lib/analytics.js',
+    api.add_files([
         'lib/events.js',
         'lib/helpers.js',
         'lib/parameters.js',
@@ -46,19 +38,10 @@ Package.on_use(function (api) {
         'lib/vote.js'],
         ['client', 'server']);
 
-    // adding the required packages
-//    api.add_files(['lib/packages/mailchimp/mailchimp.js'], 'server');
-//    api.add_files('lib/packages/rss/rss.js', 'server');
-
-
-
-
-
 
   // server folder files
   api.add_files('lib/server/toolbox.js', 'server');
   api.add_files('lib/server/api.js', 'server');
-  api.add_files('lib/server/invites.js', 'server');
   api.add_files('lib/server/migrations.js', 'server');
   api.add_files('lib/server/notifications.js', 'server');
   api.add_files('lib/server/publications.js', 'server');
@@ -76,8 +59,6 @@ Package.on_use(function (api) {
   api.add_files('lib/collections/searches.js', ['server', 'client']);
   api.add_files('lib/collections/settings.js', ['server', 'client']);
   api.add_files('lib/collections/users.js', ['server', 'client']);
-
-
 
 
   api.add_files('lib/collections/categories.js', ['server', 'client']);
@@ -171,12 +152,10 @@ Package.on_use(function (api) {
   api.add_files('lib/client/helpers/config.js', 'client');
   api.add_files('lib/client/helpers/handlebars.js', 'client');
 
-  api.add_files('lib/client/js/mixpanel.js', 'client');
   api.add_files('lib/client/js/autolink.js', 'client');
   api.add_files('lib/client/js/jquery.exists.js', 'client');
   api.add_files('lib/client/js/jquery.hotkeys.js', 'client');
   api.add_files('lib/client/js/jquery.select-to-autocomplete.min.js', 'client');
-  api.add_files('lib/client/js/jquery-ui-autocomplete.js', 'client');
   api.add_files('lib/client/js/jquery.xdomainajax.js', 'client');
   api.add_files('lib/client/spinner.css', 'client');
 
@@ -194,19 +173,9 @@ Package.on_use(function (api) {
   api.add_files('lib/public/img/bg-black.png', 'client');
   api.add_files('lib/public/img/bg-header.png', 'client');
   api.add_files('lib/public/img/default_avatar.png', 'client');
-  api.add_files('lib/public/img/logo@2x.png', 'client');
-  api.add_files('lib/public/img/telescope-logo2.png', 'client');
-  api.add_files('lib/public/img/telescope-logo.png', 'client');
   api.add_files('lib/public/img/bg-black@2x.png', 'client');
   api.add_files('lib/public/img/bg-header@2x.png', 'client');
   api.add_files('lib/public/img/bg.png', 'client');
-  api.add_files('lib/public/img/favicon.ico', 'client');
-  api.add_files('lib/public/img/loading.gif', 'client');
-  api.add_files('lib/public/img/logo.png', 'client');
-  api.add_files('lib/public/img/telescope-logo@2x.png', 'client');
-  api.add_files('lib/public/img/thegrid.svg', 'client');
-
-
 
 
 });

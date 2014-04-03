@@ -43,7 +43,7 @@ After above installation is done, you need to configure application. It provides
 - Enable/Disable userlinks on post
 - Change the backgroud color
 
-For configuration, we exposed one object called `TelescopeConfig` and two functions called `telescopeRoutes` and `telescopeRoutesServer`, which are used for configuring the routes.
+For configuration, we exposed one object called `TelescopeConfig` and which contains the sevaral fields and two functions called `telescope_routes` and `telescope_routes_server`, which are used for configuring the routes, client and server respectively.
 Typical way to put configuration in `Meteor.startup` method.
 
 Following is **minimal configuration** to run the packaged telescope application, put following in `somefileName.js` file under `lib` or any top level directory other than `client` and `server`
@@ -52,20 +52,28 @@ Configuration of Site URL is must for package, so that configured telescope app 
 
 ```
 
-// congiguration of siteURL
+// config of siteURL
 TelescopeConfig.siteUrl='forum'
 
-if(Meteor.isClient){
+ if(Meteor.isClient){
     Meteor.startup(function () {
-      telescopeRoutes(TelescopeConfig.siteUrl);
+       TelescopeConfig.telescope_routes(TelescopeConfig.siteUrl);
     });
+ }
+
+ if(Meteor.isServer){
+  Meteor.startup(function () {
+    TelescopeConfig.telescope_routes_server(TelescopeConfig.siteUrl);
+ });
+  
+ Accounts.onCreateUser(function (options, user) {
+    usr = TelescopeConfig.extend_accounts_create_user(options, user);
+    return usr;
+ });
+ 
 }
 
-if(Meteor.isServer){
-  Meteor.startup(function () {
-    telescopeRoutesServer(TelescopeConfig.siteUrl);
-  });
-}
+
 
 ```
 
@@ -77,13 +85,13 @@ But you can do following following full configuration- properties are self expla
 if(Meteor.isClient){
   Meteor.startup(function () {
     TelescopeConfig.title='My Site' 
-      TelescopeConfig.siteUrl='forum'
-      // Need to specify enablement of notifications, in server startup too
-      TelescopeConfig.enableNotifications=true
-      TelescopeConfig.enableUserLinks=true
-      TelescopeConfig.enableCategories=true
-      TelescopeConfig.backgroudColor='#353535'
-      telescopeRoutes(TelescopeConfig.siteUrl);
+    TelescopeConfig.siteUrl='forum'
+    // Need to specify enablement of notifications, in server startup too
+    TelescopeConfig.enableNotifications=true
+    TelescopeConfig.enableUserLinks=true
+    TelescopeConfig.enableCategories=true
+    TelescopeConfig.backgroudColor='#353535'
+    TelescopeConfig.telescope_routes(TelescopeConfig.siteUrl);
    });
   }
  
@@ -92,10 +100,18 @@ if(Meteor.isClient){
     // Need to specify enablement of notifications, here too. if enabled in client
     TelescopeConfig.enableNotifications=true
     TelescopeConfig.siteUrl='forum'
-    telescopeRoutesServer(TelescopeConfig.siteUrl);
+    TelescopeConfig.telescope_routes_server(TelescopeConfig.siteUrl);
   });
 }
 
+  ```
+  and also you need to following config for the accounts 
+  
+  ```
+  Accounts.onCreateUser(function (options, user) {
+    var user = TelescopeConfig.extend_accounts_create_user(options, user);
+    return user;
+  });
   ```
   
 Following functionality is not provied as compared to Telescope application
