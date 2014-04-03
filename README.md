@@ -17,8 +17,9 @@ Following are good thing about this package:
 ## Requirement
 
 While using this package, it requires following
-- the application should use the iron router for rendering the templates and should have the default Iron Router 'layoutTemplate' for rendering its page
+- the application should use the iron router for rendering the templates and should have the default Iron Router 'layoutTemplate' for rendering its own templates
 - application must use accounts-ui authentication for login, this packaged app do not have the login functionality, though it makes use of host application implemented accounts UI
+- Also this telescope package does not define any 'not-found' and 'loading', your applicaiton should define the its these own templates  
 
 ##How to integrate with your application
 Make sure that `node` and `npm` are installed.
@@ -48,7 +49,7 @@ Typical way to put configuration in `Meteor.startup` method.
 
 Following is **minimal configuration** to run the packaged telescope application, put following in `somefileName.js` file under `lib` or any top level directory other than `client` and `server`
 
-Configuration of Site URL is must for package, so that configured telescope app available at `/<configured-root>`. i.e your host application will be available at `/` and packaged telescope application will be available at `/<configured-root>`
+Configuration of Site URL is must for package, so that configured telescope app available at `/<configured-root>` and your host application will be available at `/` 
 
 ```
 
@@ -67,13 +68,13 @@ TelescopeConfig.siteUrl='forum'
  });
   
  Accounts.onCreateUser(function (options, user) {
+    // if you are already using this onCreateUser(). then append following two lines at end of the method-
+    
     usr = TelescopeConfig.extend_accounts_create_user(options, user);
     return usr;
  });
  
 }
-
-
 
 ```
 
@@ -104,16 +105,14 @@ if(Meteor.isClient){
   });
 }
 
-  ```
-  and also you need to following config for the accounts 
-  
-  ```
-  Accounts.onCreateUser(function (options, user) {
+Accounts.onCreateUser(function (options, user) {
     var user = TelescopeConfig.extend_accounts_create_user(options, user);
     return user;
   });
-  ```
   
+  ```
+
+
 Following functionality is not provied as compared to Telescope application
 - Nested comments which reply on the comment
 - No markdown for posts and comment
