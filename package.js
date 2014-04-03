@@ -1,11 +1,6 @@
 Package.describe({
   summary: "Meteor package for Telescope Application"
 });
-Npm.depends({
-    "rss": '0.0.4',
-    "mailchimp": "1.0.3",
-});
-
 
 
 Package.on_use(function (api) {
@@ -129,8 +124,6 @@ Package.on_use(function (api) {
 
   // views/errors/
   api.add_files('lib/client/views/errors/already_logged_in.html', 'client');
-  api.add_files('lib/client/views/errors/no_account.html', 'client');
-  api.add_files('lib/client/views/errors/no_account.js', 'client');
   api.add_files('lib/client/views/errors/no_rights.html', 'client');
   api.add_files('lib/client/views/errors/no_rights.js', 'client');
 
@@ -180,11 +173,9 @@ Package.on_use(function (api) {
 
   api.add_files('lib/client/js/mixpanel.js', 'client');
   api.add_files('lib/client/js/autolink.js', 'client');
-  api.add_files('lib/client/js/bootstrap-datepicker.js', 'client');
   api.add_files('lib/client/js/jquery.exists.js', 'client');
   api.add_files('lib/client/js/jquery.hotkeys.js', 'client');
   api.add_files('lib/client/js/jquery.select-to-autocomplete.min.js', 'client');
-  api.add_files('lib/client/js/jquery.sharrre-1.3.2.min.js', 'client');
   api.add_files('lib/client/js/jquery-ui-autocomplete.js', 'client');
   api.add_files('lib/client/js/jquery.xdomainajax.js', 'client');
   api.add_files('lib/client/spinner.css', 'client');

@@ -18,10 +18,6 @@
                     <span class="glyphicon glyphicon-filter"></span>
                   </a>
                   <a class="btn btn-default {{activeClass 'all'}}" href="{{filterBy 'all'}}">All</a>
-                  <a class="btn btn-default {{activeClass 'invited'}}" href="{{filterBy 'invited'}}">
-                    Invited</a>
-                  <a class="btn btn-default {{activeClass 'uninvited'}}" href="{{filterBy 'uninvited'}}">
-                    Uninvited</a>
                   <a class="btn btn-default {{activeClass 'admin'}}" href="{{filterBy 'admin'}}">Admin</a>
                 </div>
 
@@ -31,15 +27,12 @@
                   </a>
                   <a class="btn btn-default {{activeClass 'createdAt'}}" href="{{sortBy 'createdAt'}}">
                     Created</a>
-                  <a class="btn btn-default {{activeClass 'karma'}}" href="{{sortBy 'karma'}}">Karma</a>
                   <a class="btn btn-default {{activeClass 'username'}}" href="{{sortBy 'username'}}">
                     Username</a>
                   <a class="btn btn-default {{activeClass 'postCount'}}" href="{{sortBy 'postCount'}}">
                     Posts</a>
                   <a class="btn btn-default {{activeClass 'commentCount'}}" href="{{sortBy 'commentCount'}}">
                     Comments</a>
-                  <a class="btn btn-default {{activeClass 'invitedCount'}}" href="{{sortBy 'invitedCount'}}">
-                    InvitedCount</a>
                 </div>
               </div>
             </div>
@@ -53,9 +46,6 @@
                 <td>Member since</td>
                 <td>Posts</td>
                 <td>Comments</td>
-                <td>Karma</td>
-                <td>Invites</td>
-                <td>Invited?</td>
                 <td>Admin?</td>
                 <td>Actions</td>
               </tr>
