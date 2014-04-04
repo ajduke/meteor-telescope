@@ -1,5 +1,15 @@
+.telescope-wrapper * .circle {
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    border: 1px solid;
+    padding: 6px;
+}
 
 
+.telescope-wrapper * .tagging{
+    font-size: 12px;padding-top: 0px
+}
 
 .telescope-wrapper * .post-message {
     color:#666;

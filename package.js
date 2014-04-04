@@ -157,6 +157,7 @@ Package.on_use(function (api) {
   api.add_files('lib/client/js/jquery.hotkeys.js', 'client');
   api.add_files('lib/client/js/jquery.select-to-autocomplete.min.js', 'client');
   api.add_files('lib/client/js/jquery.xdomainajax.js', 'client');
+
   api.add_files('lib/client/spinner.css', 'client');
 
 

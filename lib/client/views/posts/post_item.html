@@ -20,15 +20,17 @@
             <a href="{{postLink}}" target="{{postTarget}}">
               {{headline}}
               {{#if sticky}}
-              <span class="glyphicon glyphicon-pushpin glyphicon-sm" style="font-size: 0.9em"></span>
+              <span class="">
+                <span class="circle glyphicon glyphicon-pushpin glyphicon-sm " style="font-size: 0.8em"></span>
+              </span>
               {{/if}}
             </a>
             <small>
               {{#if url}}<span>{{domain}}</span>{{/if}}
               {{#if enableCategories}}
               {{#each categories}}
-              <a href="{{categoryLink}}" class="btn btn-default btn-xs category-{{slug}}" style="font-size: 10px;padding-top: 0px">
-                <span class="glyphicon glyphicon-tag" style="font-size: .8em"></span>
+              <a href="{{categoryLink}}" class="btn btn-default btn-xs category-{{slug}} tagging" >
+                <span class="glyphicon glyphicon-tag" style="font-size: .85em"></span>
                 {{name}}</a>
               {{/each}}
               {{/if}}
