@@ -9,8 +9,7 @@ Package.on_use(function (api) {
 
 // dependecies required by package
     api.use(['templating'], 'client');
-    api.use(['jquery',
-        'backbone',
+    api.use([
         'accounts-base',
         'accounts-password',
         'accounts-twitter',
@@ -22,7 +21,6 @@ Package.on_use(function (api) {
         'nprogress',
         'fast-render',
         'bootstrap-3',
-        'fontawesome4'
     ], ['client', 'server']);
     api.add_files('lib/main.js', ['client','server']);
     // adding the required file for package

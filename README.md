@@ -69,7 +69,7 @@ TelescopeConfig.siteUrl='forum'
   
  Accounts.onCreateUser(function (options, user) {
     // if you are already using this onCreateUser(). then append following two lines at end of the method-
-    
+
     usr = TelescopeConfig.extend_accounts_create_user(options, user);
     return usr;
  });
@@ -103,12 +103,14 @@ if(Meteor.isClient){
     TelescopeConfig.siteUrl='forum'
     TelescopeConfig.telescope_routes_server(TelescopeConfig.siteUrl);
   });
+
+  Accounts.onCreateUser(function (options, user) {
+      var user = TelescopeConfig.extend_accounts_create_user(options, user);
+      return user;
+  });
 }
 
-Accounts.onCreateUser(function (options, user) {
-    var user = TelescopeConfig.extend_accounts_create_user(options, user);
-    return user;
-  });
+
   
   ```
 
